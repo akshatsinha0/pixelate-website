@@ -96,7 +96,7 @@ const ContactUs: React.FC = () => {
 
 
   useEffect(() => {
-    const shapes = Array.from({ length: 45 }).map((_, i) => {
+    const shapes = Array.from({ length: 90 }).map((_, i) => {
       const img = SHAPE_IMAGES[getRandomInt(0, SHAPE_IMAGES.length - 1)];
       const size = Math.random() < 0.2 ? getRandomInt(56, 80) : getRandomInt(18, 48);
       const top = getRandomInt(0, 90);
@@ -109,7 +109,7 @@ const ContactUs: React.FC = () => {
           key={`shape-${i}`}
           src={img.src}
           alt={img.alt}
-          className="pointer-events-none select-none absolute"
+          className={styles.randomShape}
           style={{
             top: `${top}%`,
             left: `${left}%`,
@@ -140,7 +140,7 @@ const ContactUs: React.FC = () => {
     <div
       ref={containerRef}
       className={styles.contactUsContainer}
-      style={{ zIndex: 1, background: bgGradient }}
+      style={{ zIndex: 1, background: bgGradient, position: 'relative' }}
     >
       <h1
         className={styles.contactUsHeading}
@@ -156,7 +156,9 @@ const ContactUs: React.FC = () => {
       >
         Connect with us!
       </h1>
-      {randomShapes.length > 0 && randomShapes}
+      <div className={styles.shapesContainer}>
+        {randomShapes.length > 0 && randomShapes}
+      </div>
       <BackgroundPart
         particles={particles}
         particleConfigs={particleConfigs}

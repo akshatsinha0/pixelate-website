@@ -1,0 +1,23 @@
+.button {
+  position: relative;
+  overflow: hidden;
+  font-family: inherit;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #fff;
+  background: linear-gradient(90deg, #56299D, #7E61AC, #F6EFEE);
+  border: none;
+  border-radius: 1.5rem;
+  padding: 1.1rem 2.5rem;
+  font-size: 1.15rem;
+  box-shadow: 0 6px 32px rgba(86,41,157,0.18);
+  cursor: pointer;
+  transition: background 0.3s, box-shadow 0.3s, transform 0.2s;
+}
+.button:hover, .button:focus {
+  background: linear-gradient(90deg, #7E61AC, #56299D, #F6EFEE);
+  box-shadow: 0 10px 40px rgba(86,41,157,0.28);
+  transform: translateY(-2px) scale(1.03);
+  outline: none;
+} 

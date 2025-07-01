@@ -1,0 +1,398 @@
+.contactUsContainer {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background: #120d18;
+  overflow-x: hidden;
+}
+.contactUsHeading {
+  color: #fff;
+  text-align: center;
+  font-weight: bold;
+  font-size: 3.2rem;
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+  letter-spacing: 0.01em;
+  line-height: 1.1;
+}
+.particleCanvas {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+.particleOverlay {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+.particleDot {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: linear-gradient(90deg, #56299D, #7E61AC);
+  opacity: 0.6;
+}
+.morphingShape1 {
+  position: absolute;
+  top: 2.5rem;
+  left: 2.5rem;
+  width: 8rem;
+  height: 8rem;
+  opacity: 0.3;
+  z-index: 1;
+}
+.morphingShape2 {
+  position: absolute;
+  bottom: 5rem;
+  right: 5rem;
+  width: 12rem;
+  height: 12rem;
+  opacity: 0.2;
+  z-index: 1;
+}
+.morphingShape3 {
+  position: absolute;
+  top: 50%;
+  left: 25%;
+  width: 6rem;
+  height: 6rem;
+  opacity: 0.25;
+  z-index: 1;
+}
+.iconOverlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+.floatingIcon {
+  position: absolute;
+  color: #7E61AC4D;
+  z-index: 2;
+}
+.cardGridWrapper {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 2rem;
+}
+.cardGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  max-width: 90rem;
+  width: 100%;
+}
+.infoCardWrapper {
+  perspective: 1000px;
+}
+.infoCard {
+  border-radius: 2rem;
+  overflow: hidden;
+  background: rgba(255,255,255,0.18);
+  box-shadow: 0 8px 32px 0 rgba(86,41,157,0.18), 0 1.5px 8px 0 rgba(236,72,153,0.08);
+  border: 2px solid rgba(246,239,238,0.25);
+  backdrop-filter: blur(24px) saturate(1.1);
+  -webkit-backdrop-filter: blur(24px) saturate(1.1);
+  padding: 3rem 2.5rem;
+  position: relative;
+  min-height: 700px;
+  max-width: 700px;
+  margin: 0 auto;
+}
+.infoCardHeader {
+  margin-bottom: 2.5rem;
+  text-align: center;
+  position: relative;
+  z-index: 10;
+}
+.infoCardTitle {
+  font-size: 3rem;
+  font-weight: 900;
+  background: linear-gradient(90deg, #56299D, #7E61AC, #F6EFEE);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 4px 32px rgba(86,41,157,0.18);
+}
+.infoCardSubtitle {
+  margin-top: 2rem;
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: #fff;
+  letter-spacing: 0.01em;
+  line-height: 1.5;
+  margin-bottom: 3rem;
+  padding: 0 1.5rem;
+}
+.breakDesktop {
+  display: none;
+}
+@media (min-width: 768px) {
+  .infoCardTitle { font-size: 4rem; }
+  .infoCardSubtitle { font-size: 2rem; }
+  .breakDesktop { display: inline; }
+}
+.infoCardContent {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  position: relative;
+  z-index: 10;
+}
+.contactItem {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  cursor: pointer;
+  padding: 0.5rem 0;
+}
+.contactIconWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  box-shadow: 0 2px 12px rgba(86,41,157,0.18);
+  border: 2px solid #fff3;
+  background: linear-gradient(135deg, #7E61AC 0%, #F6EFEE 100%);
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+.iconBg1 { background: linear-gradient(135deg, #ff6b6b 0%, #f59e42 100%); }
+.iconBg2 { background: linear-gradient(135deg, #4ecdc4 0%, #7e61ac 100%); }
+.iconBg3 { background: linear-gradient(135deg, #45b7d1 0%, #7e61ac 100%); }
+.contactIcon {
+  width: 3rem;
+  height: 3rem;
+  color: #fff;
+  filter: drop-shadow(0 2px 8px #19191933);
+}
+.contactTextBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  min-width: 0;
+}
+.contactLabel {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+.contactValue {
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #f6efeecc;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+.socialLinksRow {
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+  padding-top: 2.5rem;
+}
+.socialButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 1rem;
+  background: linear-gradient(135deg, #56299D 0%, #7E61AC 100%);
+  border: 1.5px solid #fff3;
+  box-shadow: 0 2px 12px rgba(86,41,157,0.18);
+  cursor: pointer;
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+.socialIcon {
+  width: 2rem;
+  height: 2rem;
+  color: #f6efee;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.formGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+.formGroup {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1.2rem 1rem 1.2rem 1rem;
+  border-radius: 1.2rem;
+  background: rgba(255,255,255,0.18);
+  box-shadow: 0 2px 16px 0 rgba(86,41,157,0.10);
+  transition: box-shadow 0.3s, background 0.3s;
+  margin-bottom: 0.5rem;
+}
+.formLabel {
+  display: block;
+  font-size: 1.08rem;
+  font-weight: 900;
+  color: #191919;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.5rem;
+  transition: color 0.2s;
+}
+.formInput {
+  width: 100%;
+  border-radius: 1rem;
+  border: 2px solid #7E61AC;
+  background: rgba(246,239,238,0.85);
+  padding: 1.15rem 1.5rem;
+  font-size: 1.13rem;
+  color: #191919;
+  transition: border-color 0.3s, box-shadow 0.3s, background 0.3s;
+  box-shadow: 0 1.5px 8px 0 rgba(86,41,157,0.08);
+}
+.formInput:focus {
+  border-color: #56299D;
+  box-shadow: 0 0 0 4px rgba(86,41,157,0.18), 0 4px 24px 0 rgba(86,41,157,0.10);
+  outline: none;
+  background: rgba(246,239,238,0.98);
+  animation: inputFocusPop 0.25s cubic-bezier(.4,2,.6,1) 1;
+}
+@keyframes inputFocusPop {
+  0% { transform: scale(1); }
+  60% { transform: scale(1.04); }
+  100% { transform: scale(1); }
+}
+.fieldGlow {
+  position: absolute;
+  inset: -4px;
+  border-radius: 1rem;
+  background: linear-gradient(90deg, #56299D, #7E61AC);
+  opacity: 0.3;
+  filter: blur(8px);
+  z-index: -1;
+}
+.formButtonGroup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+.formButton {
+  position: relative;
+  overflow: hidden;
+  font-family: inherit;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #fff;
+  background: linear-gradient(90deg, #56299D, #7E61AC, #F6EFEE);
+  border: none;
+  border-radius: 1.5rem;
+  padding: 1.1rem 2.5rem;
+  font-size: 1.15rem;
+  box-shadow: 0 6px 32px rgba(86,41,157,0.18);
+  cursor: pointer;
+  transition: background 0.3s, box-shadow 0.3s, transform 0.2s;
+}
+.formButton:hover, .formButton:focus {
+  background: linear-gradient(90deg, #7E61AC, #56299D, #F6EFEE);
+  box-shadow: 0 10px 40px rgba(86,41,157,0.28);
+  transform: translateY(-2px) scale(1.03);
+  outline: none;
+}
+.buttonContent {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.buttonIcon {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-right: 0.5rem;
+}
+.spinner {
+  width: 1.5rem;
+  height: 1.5rem;
+  border: 2px solid #fff;
+  border-top: 2px solid transparent;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+@keyframes spin {
+  100% { transform: rotate(360deg); }
+}
+.successMessage {
+  background: linear-gradient(90deg, #48bb78 20%, #f6efee 100%);
+  border: 1.5px solid #48bb78;
+  border-radius: 1.5rem;
+  padding: 2rem;
+  text-align: center;
+  color: #276749;
+  margin-top: 1.5rem;
+}
+.checkmark {
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+.successIcon {
+  width: 2.5rem;
+  height: 2.5rem;
+  color: #48bb78;
+}
+.successText {
+  font-weight: bold;
+  font-size: 1.3rem;
+  color: #276749;
+}
+.successSubtext {
+  color: #276749;
+  margin-top: 0.5rem;
+}
+.errorMessage {
+  background: linear-gradient(90deg, #e53e3e 20%, #f6efee 100%);
+  border: 1.5px solid #e53e3e;
+  border-radius: 1.5rem;
+  padding: 2rem;
+  text-align: center;
+  color: #822727;
+  margin-top: 1.5rem;
+}
+.errorIcon {
+  width: 2.5rem;
+  height: 2.5rem;
+  color: #e53e3e;
+  margin-bottom: 1rem;
+}
+.errorText {
+  font-weight: bold;
+  font-size: 1.3rem;
+  color: #822727;
+}
+.errorSubtext {
+  color: #822727;
+  margin-top: 0.5rem;
+}
+@media (max-width: 900px) {
+  .formGrid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .formGroup {
+    padding: 1rem 0.5rem;
+  }
+} 

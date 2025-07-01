@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+html, body {
+  background: #120d18 !important;
+  overflow-x: hidden !important;
+}
+:root {
+  --background: #120d18;
+  --foreground: #F6EFEE;
+}
+
+
+:focus {
+  outline: 3px dashed #7E61AC;
+  outline-offset: 4px;
+}
+
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #191919;
+}
+::-webkit-scrollbar-thumb {
+  background: #7E61AC;
+  border-radius: 4px;
+}
+
+.rozha-one-font, .rozha-one-font body {
+  font-family: 'Rozha One', serif !important;
+}
